@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = {"src\\test\\java\\features"},
 		glue = {"stepDefinations", "appHooks"},
 				plugin = {"pretty",
-						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",},
+						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		
 		publish = true)
 
