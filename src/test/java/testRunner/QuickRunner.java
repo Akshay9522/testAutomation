@@ -9,10 +9,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src\\test\\java\\features"},
 		glue = {"stepDefinations", "appHooks"},
-				plugin = {"pretty",
-						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		
-		publish = true)
+				plugin = {"pretty",
+						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class QuickRunner {
 

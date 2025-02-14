@@ -41,5 +41,28 @@ public class DriverFactory {
 	public static synchronized WebDriver getDriver() {
 		return driver;
 	}
-
+/*	class Animal {
+	    void sound() {
+	        System.out.println("Animal makes a sound");
+	    }
+	}
+	 
+	class Dog extends Animal {
+	    void sound() {
+	        System.out.println("Dog barks");
+	    }
+	    void test(){
+	        System.out.println("Test method");
+	    }
+	 
+	}
+	 
+	public class Main {
+	    public static void main(String[] args) {
+	        Animal animal = new Dog();
+	        animal.test();
+	    }
+	}
+*/
 }
+

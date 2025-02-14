@@ -35,6 +35,17 @@ public class logInPage extends BasePage {
 	private WebElement logOut;
 	
 	By Required = By.xpath("//span[text()='Required']");
+	By ForgotLink = By.xpath("//p[text()='Forgot your password? ']");
+
+	
+	@FindBy(xpath="//p[text()='Forgot your password? ']")
+	private WebElement forgotLink;
+	
+	@FindBy(xpath="//button[text()=' Reset Password ']")
+	private WebElement resetPassword;
+	
+	@FindBy(xpath="//div[@class='orangehrm-card-container']/h6")
+	private WebElement resetPasswordLinkTxt;
 	
 	public logInPage(WebDriver driver){
 		super(driver);
@@ -71,6 +82,13 @@ public class logInPage extends BasePage {
 		menu.click();
 		logOut.click();
 	}
+	public void clickOnForgotLink() {
+		forgotLink.click();
+		}
+	
+	public void clickOnResetPswd() {
+		resetPassword.click();
+		}
 	
 	public ArrayList<String> requiredMessage() {
 		ArrayList<String> arr = new ArrayList<>();
@@ -79,6 +97,10 @@ public class logInPage extends BasePage {
 			arr.add(element.getText());
 		}
 		return arr;
+	}
+	
+	public String resetLinkPswdSentMsg() {
+		return resetPasswordLinkTxt.getText();
 	}
 	
 }

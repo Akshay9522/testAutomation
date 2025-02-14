@@ -87,5 +87,21 @@ public class logInAndLogOutStep {
 		System.out.println("againtitle"+ loginpage.homePageTitle());
 		Assert.assertEquals("OrangeHRM",loginpage.homePageTitle());
 	}
+	@When("User clicks on the {string} link")
+	public void user_clicks_on_the_link(String string) {
+		loginpage.clickOnForgotLink();
+	}
+	@When("Enters the username {string}")
+	public void enters_the_username(String string) {
+		loginpage.enterUserName(string);
+	}
+	@When("Clicks on the Reset Password button")
+	public void clicks_on_the_reset_password_button() {
+		loginpage.clickOnResetPswd();
+	}
+	@Then("User should see a {string} message")
+	public void user_should_see_a_message(String expMsg) {
+	   Assert.assertEquals(expMsg, loginpage.resetLinkPswdSentMsg());
+	}
 
 }
